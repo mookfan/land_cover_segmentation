@@ -12,3 +12,6 @@ temp/
 
 .comet.config
 /raster_join
+
+*.tif
+._*
