@@ -91,6 +91,7 @@ class PatchDataset(Dataset):
                 self.dataset_root, sample_name, self.input_sensor_name
             )
         input_np = raster_to_np(input_raster_path, bands=self.input_used_channels)
+        # input_np = raster_to_np(input_raster_path)
 
         # Get target numpy array
         if self.mode != "infer":

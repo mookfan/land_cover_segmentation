@@ -39,7 +39,7 @@ def print_dataloader(dataloader: DataLoader):
     return s
 
 
-def get_dataloader(cfg: CfgNode, samples_list: str) -> DataLoader:
+def get_dataloader(cfg: CfgNode, samples_list: str, aerial: bool) -> DataLoader:
     """Builds and returns a dataloader for the dataset.
 
     Args:

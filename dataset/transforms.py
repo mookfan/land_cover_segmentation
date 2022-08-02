@@ -47,7 +47,7 @@ class NormalizeSample(object):
         return sample
 
 
-def get_transform(cfg: CfgNode) -> NormalizeSample:
+def get_transform(cfg: CfgNode, aerial=False) -> NormalizeSample:
     """Gets transform function. Builds stats dict if not existing.
 
     Args:
@@ -66,6 +66,10 @@ def get_transform(cfg: CfgNode) -> NormalizeSample:
     means = [stats["means"][channels[channel]] for channel in used_channels]
     stds = [stats["stds"][channels[channel]] for channel in used_channels]
 
+    if aerial:
+        print('Aerial Image!!')
+        means = [255./2, 255./2, 255./2]
+        stds = [255., 255., 255.]
     transform = NormalizeSample(dataset_mean=means, dataset_std=stds)
 
     return transform
