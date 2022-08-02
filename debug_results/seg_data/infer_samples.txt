@@ -1,0 +1,16 @@
+rasters/S2A_2022-01-01_2022-01-31_median/S2A_2022-01-01_2022-01-31_median_0_0.tif
+rasters/S2A_2022-01-01_2022-01-31_median/S2A_2022-01-01_2022-01-31_median_0_1.tif
+rasters/S2A_2022-01-01_2022-01-31_median/S2A_2022-01-01_2022-01-31_median_0_2.tif
+rasters/S2A_2022-01-01_2022-01-31_median/S2A_2022-01-01_2022-01-31_median_0_3.tif
+rasters/S2A_2022-01-01_2022-01-31_median/S2A_2022-01-01_2022-01-31_median_1_0.tif
+rasters/S2A_2022-01-01_2022-01-31_median/S2A_2022-01-01_2022-01-31_median_1_1.tif
+rasters/S2A_2022-01-01_2022-01-31_median/S2A_2022-01-01_2022-01-31_median_1_2.tif
+rasters/S2A_2022-01-01_2022-01-31_median/S2A_2022-01-01_2022-01-31_median_1_3.tif
+rasters/S2A_2022-01-01_2022-01-31_median/S2A_2022-01-01_2022-01-31_median_2_0.tif
+rasters/S2A_2022-01-01_2022-01-31_median/S2A_2022-01-01_2022-01-31_median_2_1.tif
+rasters/S2A_2022-01-01_2022-01-31_median/S2A_2022-01-01_2022-01-31_median_2_2.tif
+rasters/S2A_2022-01-01_2022-01-31_median/S2A_2022-01-01_2022-01-31_median_2_3.tif
+rasters/S2A_2022-01-01_2022-01-31_median/S2A_2022-01-01_2022-01-31_median_3_0.tif
+rasters/S2A_2022-01-01_2022-01-31_median/S2A_2022-01-01_2022-01-31_median_3_1.tif
+rasters/S2A_2022-01-01_2022-01-31_median/S2A_2022-01-01_2022-01-31_median_3_2.tif
+rasters/S2A_2022-01-01_2022-01-31_median/S2A_2022-01-01_2022-01-31_median_3_3.tif

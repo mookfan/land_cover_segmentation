@@ -1,0 +1,1 @@
+rasters/S2A_2022-01-01_2022-01-31_median.tif
