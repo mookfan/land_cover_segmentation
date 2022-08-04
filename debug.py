@@ -20,6 +20,12 @@ from utils.io_utils import get_lines_from_txt
 
 cfg_path = 'config/weighted_loss_more_snow_data_aug_hrnet.yml'
 checkpoint = 'weights/cfg_weighted_loss_more_snow_data_aug_hrnet_3bands_resume_best_f1.pth'
+
+# samples_list_path = 'rasters/2017.txt'
+# destination = 'debug_results/2017/'
+# output_types = ['alphablend','raster','alphablended_raster', 'raw_raster']
+# aerial=True
+
 samples_list_path = 'rasters/S2A_2022-01-01_2022-01-31_median.txt'
 destination = 'debug_results/S2A_2022-01-01_2022-01-31_median/'
 output_types = ['alphablend','raster','alphablended_raster', 'raw_raster']

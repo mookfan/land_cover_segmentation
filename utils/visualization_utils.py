@@ -123,7 +123,7 @@ def generate_save_raster(
     colors_dict = mask_config["colors"]
     alphablended = create_alphablend(dummy_image, mask, alpha, colors_dict)
     colored_mask = alphablended.transpose(2, 0, 1)
-    colored_mask = colored_mask.astype(np.int8)
+    colored_mask = colored_mask.astype(np.uint8) # if use np.int8: 186. >> -70, I think it should be just 186 with type int.
     np_to_raster(colored_mask, ref_raster, raster_path)
 
 

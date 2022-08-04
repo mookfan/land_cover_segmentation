@@ -14,7 +14,7 @@ from utils.utilities import get_raster_filepath
 
 class PatchDataset(Dataset):
     def __init__(
-        self, cfg: CfgNode, samples_list: str, transforms=None, aug_transforms=None
+        self, cfg: CfgNode, samples_list: str, aerial: bool, transforms=None, aug_transforms=None
     ):
         """Patch Dataset initialization
 
@@ -36,6 +36,8 @@ class PatchDataset(Dataset):
         self.channels_list = cfg.DATASET.INPUT.CHANNELS
         self.input_used_channels = cfg.DATASET.INPUT.USED_CHANNELS
         self.target_sensor_name = cfg.DATASET.MASK.SENSOR
+
+        self.aerial = aerial
 
         if samples_list == "train":
             self.dataset_list_path = cfg.DATASET.LIST_TRAIN
@@ -90,9 +92,13 @@ class PatchDataset(Dataset):
             input_raster_path = get_raster_filepath(
                 self.dataset_root, sample_name, self.input_sensor_name
             )
-        input_np = raster_to_np(input_raster_path, bands=self.input_used_channels)
-        # input_np = raster_to_np(input_raster_path)
-
+        if self.aerial:
+            # get band by index number
+            input_np = raster_to_np(input_raster_path)
+        else:
+            # get band by self.input_used_channels key
+            input_np = raster_to_np(input_raster_path, bands=self.input_used_channels)
+            
         # Get target numpy array
         if self.mode != "infer":
             # Get target tensor

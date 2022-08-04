@@ -54,12 +54,12 @@ def get_dataloader(cfg: CfgNode, samples_list: str, aerial: bool) -> DataLoader:
     if not os.path.isfile(cfg.DATASET.INPUT.STATS_FILE):
         build_dataset_stats_json_from_cfg(cfg)
 
-    transform = get_transform(cfg)
+    transform = get_transform(cfg, aerial)
     transforms = Compose([transform])
     aug_transforms = get_augmentation_transforms(cfg)
 
     dataset = PatchDataset(
-        cfg, samples_list, transforms=transforms, aug_transforms=aug_transforms
+        cfg, samples_list, transforms=transforms, aug_transforms=aug_transforms, aerial=aerial
     )
 
     if samples_list in ["train", "val"]:
