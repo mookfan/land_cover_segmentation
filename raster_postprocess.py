@@ -26,7 +26,7 @@ def raster_mosiac(list_path, visualize=False):
     return mosaic, out_trans, src_files_to_mosaic
 
 
-seg_dir = '/Volumes/Backup Plus/erudite/drone/land_cover_segmentation/debug_results/S2A_2022-01-01_2022-01-31_median_256_mean_std_channels_stats/raster'
+seg_dir = 'debug_results/S2A_2022-01-01_2022-01-31_median_256_mean_std_channels_stats/raster'
 cfg_path = 'config/weighted_loss_more_snow_data_aug_hrnet.yml'
 
 cfg = get_cfg_from_file(cfg_path)
@@ -35,7 +35,7 @@ mask_config = load_yaml(mask_config_path)
 
 seg_list_path = [os.path.join(seg_dir, fname) for fname in os.listdir(seg_dir)]
 
-raster, out_trans, scr_files_DatasetReader  = raster_mosiac(seg_list_path, visualize=False)
+raster, out_trans, scr_files_DatasetReader  = raster_mosiac(seg_list_path, visualize=True)
 raster_crs = scr_files_DatasetReader[0].crs
 
 raster = raster.transpose(1, 2, 0) # from (ch, w, h) > (w, h, ch)
